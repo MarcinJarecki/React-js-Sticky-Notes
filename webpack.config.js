@@ -3,20 +3,19 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
 
-var port = process.env.HOT_LOAD_PORT || 2992;
+var hot_load_port = process.env.HOT_LOAD_PORT || 2992;
 
 var config = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:' + port,
-    'webpack/hot/only-dev-server',
-    path.join(__dirname, 'app')
-    // './app/index.js'
+    // 'webpack-dev-server/client?http://192.168.134.128:' + hot_load_port,
+    // 'webpack/hot/only-dev-server',
+    // path.join(__dirname, 'app')
+    './app/index.js'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "index-bundle.js",
-    publicPath: '/static/'
   },
   module: {
     preLoaders: [
@@ -31,7 +30,7 @@ var config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['react-hot', 'babel-loader'],  
         include: path.join(__dirname, 'app')
       },
       {
@@ -49,17 +48,18 @@ var config = {
     new HtmlWebpackPlugin({
       template: __dirname + '/app/index.html',
       filename: 'index.html',
-      inject: true
+      inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dev'),
     historyApiFallback: true,
     hot: true,
     progress: true,
     stats: 'errors-only',
-    port: port
+    port: hot_load_port,
+    host: '192.168.1.156'
   }
 
 };
@@ -72,7 +72,5 @@ var config = {
 // if (process.env.NODE_ENV === "production") {
 //   config.resolve.alias = { 'react-a11y': function () { } }; // Aliases react-a11y to nothing in production
 // }
-
-config.port = port;
 
 module.exports = config;
