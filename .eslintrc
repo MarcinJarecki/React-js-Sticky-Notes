@@ -1,8 +1,12 @@
 {
+  // OFF = 0;
+  // WARNING = 1;
+  // ERROR = 2;
   // Extend existing configuration
   // from ESlint and eslint-plugin-react defaults.
   "extends": [
-    "eslint:recommended", "plugin:react/recommended"
+    "eslint:recommended", "plugin:react/recommended",
+    "./node_modules/fbjs-scripts/eslint/.eslintrc.js"
   ],
   // Enable ES6 support. If you want to use custom Babel
   // features, you will need to enable a custom parser
@@ -19,14 +23,65 @@
   },
   // Enable custom plugin known as eslint-plugin-react
   "plugins": [
-    "react"
+    "react",
+    "react-internal"
   ],
   "rules": {
-    // Disable `no-console` rule
     "no-console": 0,
-    // Give a warning if identifiers contain underscores
     "no-underscore-dangle": 1,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    //rules from facebook/react
+    "accessor-pairs": 0,
+    "brace-style": [2, "1tbs"],
+    "comma-dangle": [2, "always-multiline"],
+    "consistent-return": 2,
+    "dot-location": [2, "property"],
+    "dot-notation": 2,
+    "eol-last": 2,
+    "eqeqeq": [2, "allow-null"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "jsx-quotes": [2, "prefer-double"],
+    "no-bitwise": 0,
+    "no-inner-declarations": [2, "functions"],
+    "no-multi-spaces": 2,
+    "no-restricted-syntax": [2, "WithStatement"],
+    "no-shadow": 2,
+    "no-unused-expressions": 2,
+    "no-unused-vars": [2, {"args": "none"}],
+    "quotes": [2, "single", "avoid-escape"],
+    "space-after-keywords": 2,
+    "space-before-blocks": 2,
+    "space-before-function-paren": [2, {"anonymous": "never", "named": "never"}],
+    "space-before-keywords": 2,
+    "strict": [2, "global"],
+
+    // React & JSX
+    // Our transforms set this automatically
+    "react/display-name": 0,
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-no-undef": 2,
+    // We don"t care to do this
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    // It"s easier to test some things this way
+    "react/no-did-mount-set-state": 0,
+    "react/no-did-update-set-state": 0,
+    // We define multiple components in test files
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 0,
+    // This isn"t useful in our test code
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 2,
+    // We don"t care to do this
+    "react/sort-comp": 0,
+    "react/wrap-multilines": [2, {"declaration": false, "assignment": false}],
+
+    // CUSTOM RULES
+    // the second argument of warning/invariant should be a literal string
+    "react-internal/warning-and-invariant-args": 2,
 
   }
 }

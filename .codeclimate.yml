@@ -1,0 +1,31 @@
+---
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - app/**
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- dist/**/*
+- node_modules/**/*
+- tests/**/*
+ecmaFeatures:
+  modules: true
+  jsx: true
+env:
+  amd: true
+  browser: true
+  es6: true
+  jquery: true
+  node: true
