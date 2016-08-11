@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
 
@@ -12,11 +12,12 @@ var MenuBar = React.createClass({
     render: function () {
         return (
             <div id="menu-bar">
-                <button className="btn btn-lg btn-success glyphicon glyphicon-plus pull-right" onClick={this.createNote.bind(null, 'Empty title') } ></button>
+                <button className="btn btn-lg btn-success glyphicon glyphicon-plus pull-right"
+                    onClick={this.createNote.bind(null, 'Empty title') } ></button>
             </div>
-        )
-    }
-})
+        );
+    },
+});
 
 var NoteBoard = React.createClass({
 
@@ -25,26 +26,26 @@ var NoteBoard = React.createClass({
             notes: [
                 {
                     title: 'Shopping list',
-                    text: 'Apple'
+                    text: 'Apple',
                 },
                 {
                     title: 'Lerning plan',
-                    text: 'React'
+                    text: 'React',
                 },
                 {
                     title: 'Exercises list',
-                    text: 'Running'
+                    text: 'Running',
                 },
                 {
                     title: 'Other things',
-                    text: 'Nap'
+                    text: 'Nap',
                 },
                 {
                     title: 'Trip list',
-                    text: 'Lake'
-                }
-            ]
-        }
+                    text: 'Lake',
+                },
+            ],
+        };
     },
 
     createNote: function (titleText) {
@@ -68,27 +69,28 @@ var NoteBoard = React.createClass({
     },
 
     eachNotes: function (note, i) {
-        return (<StickyNotes key={i} noteID={i} title={note.title} text={note.text} removeNotefromBoard={this.removeNote} updateNoteText={this.updateNoteText} doneNote={this.doneNote} />)
+        return (<StickyNotes key={i} noteID={i} title={note.title} text={note.text}
+            removeNotefromBoard={this.removeNote} updateNoteText={this.updateNoteText} doneNote={this.doneNote} />);
     },
 
     render: function () {
         return (
             <div>
                 <MenuBar createNote={this.createNote} />
-                <div className='board'>
+                <div className="board">
                     {this.state.notes.map(this.eachNotes) }
                 </div>
             </div>
-        )
-    }
+        );
+    },
 });
 
 var StickyNotes = React.createClass({
 
     getInitialState: function () {
         return {
-            texDecorationNote: this.normalNoteStyle
-        }
+            texDecorationNote: this.normalNoteStyle,
+        };
     },
 
     noteStyleAnimation: function (rowID) {
@@ -104,15 +106,15 @@ var StickyNotes = React.createClass({
     },
 
     removeButtonStyle: {
-        'float': 'right'
+        'float': 'right',
     },
 
     doneNoteStyle: {
-        'text-decoration': 'line-through'
+        'text-decoration': 'line-through',
     },
 
     normalNoteStyle: {
-        'text-decoration': 'none'
+        'text-decoration': 'none',
     },
 
     remove: function () {
@@ -126,9 +128,9 @@ var StickyNotes = React.createClass({
 
     doneNote: function (statusCheckBox) {
         if (statusCheckBox) {
-            this.setState({ texDecorationNote: this.doneNoteStyle })
+            this.setState({ texDecorationNote: this.doneNoteStyle });
         } else {
-            this.setState({ texDecorationNote: this.normalNoteStyle })
+            this.setState({ texDecorationNote: this.normalNoteStyle });
         }
     },
 
@@ -139,9 +141,11 @@ var StickyNotes = React.createClass({
                     <li>
                         <a href="#">
 
-                            <button onClick={this.remove} className="btn btn-xs btn-danger glyphicon glyphicon-trash" style={this.removeButtonStyle}> </button>
+                            <button onClick={this.remove} className="btn btn-xs btn-danger glyphicon glyphicon-trash"
+                                style={this.removeButtonStyle}> </button>
                             <h4 style={this.state.texDecorationNote}>{this.props.title}</h4>
-                            <textarea defaultValue={this.props.text} onBlur={this.updateText} ref='noteTextArea' style={this.state.texDecorationNote}></textarea>
+                            <textarea defaultValue={this.props.text} onBlur={this.updateText} ref="noteTextArea"
+                                style={this.state.texDecorationNote}></textarea>
 
                             <div id="note">
                                 <NoteCheckBox doneNote={this.doneNote}/>
@@ -150,16 +154,16 @@ var StickyNotes = React.createClass({
                     </li>
                 </ul>
             </div>
-        )
-    }
+        );
+    },
 });
 
 var NoteCheckBox = React.createClass({
 
     getInitialState: function () {
         return {
-            checked: false
-        }
+            checked: false,
+        };
     },
 
     handleChecked: function () {
@@ -171,10 +175,11 @@ var NoteCheckBox = React.createClass({
     render: function () {
         return (
             <p className="checkbox">
-                <label><input className="pull-right" type='checkbox' defaultChecked={this.state.checked} onChange={this.handleChecked}/> Done </label>
+                <label><input className="pull-right" type="checkbox" defaultChecked={this.state.checked}
+                    onChange={this.handleChecked}/> Done </label>
             </p>
-        )
-    }
+        );
+    },
 });
 
 var Footer = React.createClass({
@@ -184,12 +189,12 @@ var Footer = React.createClass({
             <footer>
                 footer
             </footer>
-        )
-    }
+        );
+    },
 });
 
 ReactDOM.render(
-    <div className='board-container'>
+    <div className="board-container">
         <NoteBoard/>
         <Footer/>
     </div>

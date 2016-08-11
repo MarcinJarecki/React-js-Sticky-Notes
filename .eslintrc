@@ -5,7 +5,8 @@
   // Extend existing configuration
   // from ESlint and eslint-plugin-react defaults.
   "extends": [
-    "eslint:recommended", "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "./node_modules/fbjs-scripts/eslint/.eslintrc.js"
   ],
   // Enable ES6 support. If you want to use custom Babel
@@ -29,30 +30,28 @@
   "rules": {
     "no-console": 0,
     "no-underscore-dangle": 1,
-    "react/prop-types": 0,
     //rules from facebook/react
     "accessor-pairs": 0,
-    "brace-style": [2, "1tbs"],
+    "brace-style": [2, "1tbs"], 
     "comma-dangle": [2, "always-multiline"],
     "consistent-return": 2,
     "dot-location": [2, "property"],
     "dot-notation": 2,
     "eol-last": 2,
     "eqeqeq": [2, "allow-null"],
-    "indent": [2, 2, {"SwitchCase": 1}],
+    "indent": [2, 4, {"SwitchCase": 1}],
     "jsx-quotes": [2, "prefer-double"],
     "no-bitwise": 0,
     "no-inner-declarations": [2, "functions"],
-    "no-multi-spaces": 2,
+    "no-multi-spaces": 0,
     "no-restricted-syntax": [2, "WithStatement"],
     "no-shadow": 2,
     "no-unused-expressions": 2,
     "no-unused-vars": [2, {"args": "none"}],
     "quotes": [2, "single", "avoid-escape"],
-    "space-after-keywords": 2,
+    "keyword-spacing": 2,
     "space-before-blocks": 2,
-    "space-before-function-paren": [2, {"anonymous": "never", "named": "never"}],
-    "space-before-keywords": 2,
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "always"}],
     "strict": [2, "global"],
 
     // React & JSX
@@ -81,7 +80,6 @@
 
     // CUSTOM RULES
     // the second argument of warning/invariant should be a literal string
-    "react-internal/warning-and-invariant-args": 2,
-
+    "react-internal/warning-and-invariant-args": 2
   }
 }
