@@ -4,7 +4,7 @@
   "description": "Project",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint app/**/*.js",
     "test": "npm run lint",
     "start": "webpack-dev-server --hot --inline --progress --colors",
     "prod": "webpack -p"
