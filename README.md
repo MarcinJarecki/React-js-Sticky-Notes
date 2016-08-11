@@ -13,6 +13,11 @@ Sticky notes - React.js project with webpack and hot reload
 - Text editor: Atom, Sublime, Visual Studio Code etc.
 - node.js v6
 
+####Project structure
+- /app - aplication file
+- /dist - folder fo production version (minification)
+- eslin-rules - rules from /facebook/React
+
 #Project under development :)
 
 
