@@ -4,9 +4,9 @@
   "description": "Project",
   "main": "index.js",
   "scripts": {
-    "test": "\"test\": \"ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js\"",
+    "lint": "eslint .",
+    "test": "npm run lint",
     "start": "webpack-dev-server --hot --inline --progress --colors",
-    "start_old": "webpack-dev-server --hot --inline  --progress --colors ",
     "prod": "webpack -p"
   },
   "repository": {

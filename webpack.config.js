@@ -8,9 +8,6 @@ var hot_load_port = process.env.HOT_LOAD_PORT || 2992;
 var config = {
   devtool: 'eval',
   entry: [
-    // 'webpack-dev-server/client?http://192.168.134.128:' + hot_load_port,
-    // 'webpack/hot/only-dev-server',
-    // path.join(__dirname, 'app')
     './app/index.js'
   ],
   output: {
@@ -23,7 +20,6 @@ var config = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint'
-
       }
     ],
     loaders: [
@@ -63,14 +59,5 @@ var config = {
   }
 
 };
-
-
-// if (process.env.NODE_ENV === "development") {
-//   config.devtool = 'eval'; // This is not as dirty as it looks. It just generates source maps without being crazy slow.
-// }
-
-// if (process.env.NODE_ENV === "production") {
-//   config.resolve.alias = { 'react-a11y': function () { } }; // Aliases react-a11y to nothing in production
-// }
 
 module.exports = config;
