@@ -8,10 +8,15 @@ node_js:
 - '6.1'
 install:
 - npm install
+before_install:
+- openssl aes-256-cbc -K $encrypted_00be96f15679_key -iv $encrypted_00be96f15679_iv -in github_deploy_key.enc -out github_deploy_key -d
 script:
 - npm test
 - npm run build
 after_success:
+- chmod 600 github_deploy_key
+- eval "$(ssh-agent -s)"
+- ssh-add deploy_key
 - git config user.name $GH_USER_NAME
 - git config user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
@@ -28,6 +33,3 @@ after_success:
 notifications:
   email:
     on_success: never
-before_install:
-- openssl aes-256-cbc -K $encrypted_00be96f15679_key -iv $encrypted_00be96f15679_iv
-  -in github_deploy_key.enc -out github_deploy_key -d
