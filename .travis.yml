@@ -1,23 +1,30 @@
+SOURCE_BRANCH="master"
+TARGET_BRANCH="Deploy"
+SOURCE_DIR="dist"
+TARGET_DIR="dist"
 language: node_js
 node_js:
-  - "6.1"
+- '6.1'
 install:
-  - npm install
+- npm install
 script:
-  - npm test
-  - npm run build 
+- npm test
+- npm run build
 after_success:
-  - ls
-  - git config user.name $GH_USER_NAME
-  - git config user.email $GH_USER_EMAIL
-  - cd dist
-  - ls
-  - git add .
-  - git commit -m "add build"
-  - git push -fq origin master
-  - echo -e "Done prepare build"
+- git config user.name $GH_USER_NAME
+- git config user.email $GH_USER_EMAIL
+- REV=$(git rev-parse HEAD)
+- cd out
+- git checkout $TARGET_BRANCH
+- cd $SOURCE_DIR
+- ls
+- git add .
+- git commit -m "Travis build: $TRAVIS_BUILD_ID - Built from commit $REV"
+- git push -fq origin Deploy
+- echo -e "Done prepare build"
 notifications:
   email:
     on_success: never
-
-   
+before_install:
+- openssl aes-256-cbc -K $encrypted_00be96f15679_key -iv $encrypted_00be96f15679_iv
+  -in github_deploy_key.enc -out github_deploy_key -d
