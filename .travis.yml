@@ -6,6 +6,12 @@ install:
 script:
   - npm test
   - npm run build 
+after_success:
+  - cd dist
+  - git add .
+  - git commit -m "add build"
+  - git push -fq origin master
+  - echo -e "Done prepare build"
 notifications:
   email:
     on_success: never
