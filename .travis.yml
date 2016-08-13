@@ -7,7 +7,10 @@ script:
   - npm test
   - npm run build 
 after_success:
+  - git config user.name "Travis CI"
+  - git config user.email "$COMMIT_AUTHOR_EMAIL"
   - cd dist
+  - ls
   - git add .
   - git commit -m "add build"
   - git push -fq origin master
