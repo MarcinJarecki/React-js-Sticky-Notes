@@ -16,18 +16,17 @@ script:
 after_success:
 - chmod 600 github_deploy_key
 - eval "$(ssh-agent -s)"
-- ssh-add deploy_key
+- ssh-add github_deploy_key
 - git config user.name $GH_USER_NAME
 - git config user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
 - git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
-- git branch
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
+- git checkout $TARGET_BRANCH
+- git checkout master -- $TARGET_DIR
 - ls
-- cd $SOURCE_DIR
-- ls
-- git add -A .
+- git add $TARGET_DIR
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
 - git push -fq $REPO $TARGET_BRANCH
 notifications:
