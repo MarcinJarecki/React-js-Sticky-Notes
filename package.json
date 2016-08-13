@@ -1,13 +1,17 @@
 {
   "name": "react",
   "version": "0.0.1",
-  "description": "Project",
+  "description": "Sticky notes project",
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.9.5"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint app/**/*.js",
     "test": "npm run lint",
-    "start": "webpack-dev-server --hot --inline --progress --colors",
-    "prod": "webpack -p"
+    "start": "webpack-dev-server --config ./webpack.dev.config.js --hot --inline --progress --colors",
+    "build": "webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "repository": {
     "type": "git",
