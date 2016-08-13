@@ -27,7 +27,7 @@ after_success:
 - cd ..
 - ls
 - cd $TARGET_DIR
-- git add -A .
+- git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
 - git push -fq $REPO $TARGET_BRANCH
 notifications:
