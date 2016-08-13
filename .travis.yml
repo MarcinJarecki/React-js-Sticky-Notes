@@ -22,7 +22,10 @@ after_success:
 - REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
 - git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
+- ls
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
+- cd ..
+- ls
 - git checkout $TARGET_BRANCH
 - git checkout master -- $TARGET_DIR
 - ls
