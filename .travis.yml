@@ -2,7 +2,7 @@ env:
   -SOURCE_BRANCH="master"
   -TARGET_BRANCH="Deploy"
   -SOURCE_DIR="dist"
-  -TARGET_DIR="dist"
+  -TARGET_DIR="public"
 language: node_js
 node_js:
 - '6.1'
@@ -14,14 +14,17 @@ script:
 after_success:
 - git config user.name $GH_USER_NAME
 - git config user.email $GH_USER_EMAIL
+- REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
-- cd out
-- git checkout $TARGET_BRANCH
+- git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
+- git branch
+- rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
+- ls
 - cd $SOURCE_DIR
 - ls
-- git add .
-- git commit -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq origin Deploy
+- git add -A .
+- git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
+- git push -fq $REPO $TARGET_BRANCH
 notifications:
   email:
     on_success: never
