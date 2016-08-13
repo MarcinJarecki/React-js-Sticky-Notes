@@ -20,7 +20,7 @@ after_success:
 - cd $SOURCE_DIR
 - ls
 - git add .
-- git commit -m "Travis build $TRAVIS_BUILD_ID"
+- git commit -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
 - git push -fq origin Deploy
 notifications:
   email:

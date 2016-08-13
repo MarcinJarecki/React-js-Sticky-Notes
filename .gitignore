@@ -3,3 +3,4 @@ dist
 logs
 coverage
 *.log
+github_deploy_key
