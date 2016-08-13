@@ -7,7 +7,9 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "./node_modules/fbjs-scripts/eslint/.eslintrc.js"
+    "./eslint-rules/.eslintrc.js"
+    //"./node_modules/fbjs-scripts/eslint/.eslintrc.js" //-> I copy file to /eslint-rules catalog
+    
   ],
   // Enable ES6 support. If you want to use custom Babel
   // features, you will need to enable a custom parser

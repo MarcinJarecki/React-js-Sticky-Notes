@@ -1,6 +1,26 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.tabSize": 2,
-    "editor.wrappingIndent": "indent",
-    "editor.detectIndentation": false
+  "editor.tabSize": 2,
+  "editor.wrappingIndent": "indent",
+  "editor.detectIndentation": false,
+  // Enable / disable JavaScript validation
+  "javascript.validate.enable": true,
+  // Defines space handling after a comma delimiter
+  "javascript.format.insertSpaceAfterCommaDelimiter": true,
+  //  Defines space handling after a semicolon in a for statement
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
+  // Defines space handling after a binary operator
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  // Defines space handling after keywords in control flow statement
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+  // Defines space handling after function keyword for anonymous functions
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  // Defines space handling after opening and before closing non empty parenthesis
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  // Defines space handling after opening and before closing non empty brackets
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  // Defines whether an open brace is put onto a new line for functions or not
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+  // Defines whether an open brace is put onto a new line for control blocks or not
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false
 }
