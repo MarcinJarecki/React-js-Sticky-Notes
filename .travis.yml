@@ -1,7 +1,8 @@
-SOURCE_BRANCH="master"
-TARGET_BRANCH="Deploy"
-SOURCE_DIR="dist"
-TARGET_DIR="dist"
+env:
+  -SOURCE_BRANCH="master"
+  -TARGET_BRANCH="Deploy"
+  -SOURCE_DIR="dist"
+  -TARGET_DIR="dist"
 language: node_js
 node_js:
 - '6.1'
@@ -19,9 +20,8 @@ after_success:
 - cd $SOURCE_DIR
 - ls
 - git add .
-- git commit -m "Travis build: $TRAVIS_BUILD_ID - Built from commit $REV"
+- git commit -m "Travis build $TRAVIS_BUILD_ID"
 - git push -fq origin Deploy
-- echo -e "Done prepare build"
 notifications:
   email:
     on_success: never
