@@ -26,10 +26,8 @@ after_success:
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
 - cd ..
 - ls
-- git checkout $TARGET_BRANCH
-- git checkout master -- $TARGET_DIR
-- ls
-- git add $TARGET_DIR
+- cd $TARGET_DIR
+- git add -A .
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
 - git push -fq $REPO $TARGET_BRANCH
 notifications:
