@@ -24,7 +24,6 @@ after_success:
 - git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
 - ls
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
-- cd ..
 - ls
 - cd $TARGET_DIR
 - git add -A . 
