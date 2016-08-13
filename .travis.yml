@@ -8,8 +8,8 @@ script:
   - npm run build 
 after_success:
   - ls
-  - git config user.name "Travis CI"
-  - git config user.email "$COMMIT_AUTHOR_EMAIL"
+  - git config user.name $GH_USER_NAME
+  - git config user.email $GH_USER_EMAIL
   - cd dist
   - ls
   - git add .
