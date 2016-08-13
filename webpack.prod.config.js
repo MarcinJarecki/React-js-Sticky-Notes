@@ -6,12 +6,12 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    './app/index.js'
+    './app/index.js',
   ],
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: "index-bundle.js",
+    filename: 'index-bundle.js',
     publicPath: '/dist/',
   },
 
@@ -19,7 +19,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + '/app/index.html',
       filename: 'index.html',
-      inject: 'body'
+      inject: 'body',
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -44,9 +44,9 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        loader: "style-loader!css-loader",
-        include: path.join(__dirname, 'app')
-      }
-    ]
-  }
+        loader: 'style-loader!css-loader',
+        include: path.join(__dirname, 'app'),
+      },
+    ],
+  },
 };

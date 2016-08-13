@@ -16,7 +16,8 @@ Sticky notes - React.js project with webpack and hot reload
 ####Project structure
 - /app - aplication file
 - /dist - folder fo production version (minification)
-- eslin-rules - rules from /facebook/React
+- /eslin-rules - rules from /facebook/React
+- /.vscode - Visual studio code configuration
 
 #Project under development :)
 
