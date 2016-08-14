@@ -174,10 +174,6 @@ function getBaseConfig() {
       'no-invalid-this': OFF,
       // babel should handle this fine
       'no-iterator': OFF,
-      // Should be effectively equivalent to jshint W028 - allowing the use
-      // of labels in very specific situations. ESLint no-empty-labels was
-      // deprecated.
-      'no-labels': [ERROR, {allowLoop: true, allowSwitch: true}],
       // lone blocks create no scope, will ignore blocks with let/const
       'no-lone-blocks': WARNING,
       // equivalent to jshint loopfunc

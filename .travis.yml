@@ -1,11 +1,3 @@
-env:
-  -SOURCE_BRANCH="master"
-  -DEPLOY_BRANCH="Deploy"
-  -SOURCE_DIR="dist"
-  -DEPLOY_DIR="public"
-  -DEPLOY_REPO="https://github.com/MarcinJarecki/React-js-Sticky-Notes.git"
-  -DEPLOY_SHORT="github.com/MarcinJarecki/React-js-Sticky-Notes.git"
-  -DEPLOY_REPO_NAME="React-js-Sticky-Notes"
 language: node_js
 node_js: 
 - '6.1'
@@ -16,24 +8,6 @@ before_install:
 script:
 - npm test
 - npm run build
-after_success:
-- ls
-- chmod 600 github_deploy_key
-- eval "$(ssh-agent -s)"
-- ssh-add github_deploy_key
-- REPO=$(git config remote.origin.url)
-- REV=$(git rev-parse HEAD)
-- rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $DEPLOY_REPO_NAME/$DEPLOY_DIR/
-- cd $DEPLOY_REPO_NAME/$DEPLOY_DIR
-- ls
-- git init
-- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
-- git remote
-- git config --global user.name $GH_USER_NAME
-- git config --global user.email $GH_USER_EMAIL
-- git add -A . 
-- git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq deploy deploy
 notifications:
   email:
     on_success: never
