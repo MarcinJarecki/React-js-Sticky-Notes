@@ -1,8 +1,10 @@
 env:
   -SOURCE_BRANCH="master"
-  -TARGET_BRANCH="Deploy"
+  -DEPLOY_BRANCH="Deploy"
   -SOURCE_DIR="dist"
-  -TARGET_DIR="public"
+  -DEPLOY_DIR="public"
+  -DEPLOY_REPO="https://github.com/MarcinJarecki/React-js-Sticky-Notes.git"
+  -DEPLOY_REPO_NAME="React-js-Sticky-Notes"
 language: node_js
 node_js:
 - '6.1'
@@ -21,10 +23,9 @@ after_success:
 - git config --global user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
-- rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
-- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
-- git checkout deploy Deploy
-- cd $TARGET_DIR
+- git clone --depth=50 --branch=deploy $DEPLOY_REPO
+- rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ DEPLOY_REPO_NAME/$DEPLOY_DIR/
+- cd $DEPLOY_REPO_NAME/$DEPLOY_DIR
 - ls
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
