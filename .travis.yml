@@ -21,15 +21,13 @@ after_success:
 - git config --global user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
-- git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
-- ls
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
-- ls
+- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
 - cd $TARGET_DIR
 - ls
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq $REPO $TARGET_BRANCH
+- git push -fq deploy
 notifications:
   email:
     on_success: never
