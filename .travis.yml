@@ -29,7 +29,7 @@ after_success:
 - ls
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq deploy Deploy
+- git push -fq origin deploy
 notifications:
   email:
     on_success: never
