@@ -25,7 +25,7 @@
 
 'use strict';
 
-var assign = require('object-assign');
+var assign = require('./object-assign');
 
 // see http://eslint.org/docs/user-guide/configuring.html#configuring-rules
 const OFF = 0;

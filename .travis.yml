@@ -7,7 +7,7 @@ env:
   -DEPLOY_SHORT="github.com/MarcinJarecki/React-js-Sticky-Notes.git"
   -DEPLOY_REPO_NAME="React-js-Sticky-Notes"
 language: node_js
-node_js:
+node_js: 
 - '6.1'
 install:
 - npm install
