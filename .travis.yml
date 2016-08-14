@@ -23,11 +23,12 @@ after_success:
 - REV=$(git rev-parse HEAD)
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
 - git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
+- git checkout deploy Deploy
 - cd $TARGET_DIR
 - ls
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq deploy
+- git push -fq deploy Deploy
 notifications:
   email:
     on_success: never
