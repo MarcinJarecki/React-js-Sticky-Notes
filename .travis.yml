@@ -4,6 +4,7 @@ env:
   -SOURCE_DIR="dist"
   -DEPLOY_DIR="public"
   -DEPLOY_REPO="https://github.com/MarcinJarecki/React-js-Sticky-Notes.git"
+  -DEPLOY_SHORT="github.com/MarcinJarecki/React-js-Sticky-Notes.git"
   -DEPLOY_REPO_NAME="React-js-Sticky-Notes"
 language: node_js
 node_js:
@@ -16,9 +17,11 @@ script:
 - npm test
 - npm run build
 after_success:
+- ls
 - chmod 600 github_deploy_key
 - eval "$(ssh-agent -s)"
 - ssh-add github_deploy_key
+- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
 - git config --global user.name $GH_USER_NAME
 - git config --global user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
@@ -29,7 +32,7 @@ after_success:
 - ls
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
-- git push -fq origin deploy
+- git push -fq deploy deploy
 notifications:
   email:
     on_success: never
