@@ -21,15 +21,16 @@ after_success:
 - chmod 600 github_deploy_key
 - eval "$(ssh-agent -s)"
 - ssh-add github_deploy_key
-- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
-- git config --global user.name $GH_USER_NAME
-- git config --global user.email $GH_USER_EMAIL
 - REPO=$(git config remote.origin.url)
 - REV=$(git rev-parse HEAD)
-- git clone --depth=50 --branch=deploy $DEPLOY_REPO
 - rsync -rt --delete --exclude=".git" --exclude=".travis.yml" $SOURCE_DIR/ $DEPLOY_REPO_NAME/$DEPLOY_DIR/
 - cd $DEPLOY_REPO_NAME/$DEPLOY_DIR
 - ls
+- git init
+- git remote add deploy ssh://git@github.com:MarcinJarecki/React-js-Sticky-Notes.git
+- git remote
+- git config --global user.name $GH_USER_NAME
+- git config --global user.email $GH_USER_EMAIL
 - git add -A . 
 - git commit --allow-empty -m "Travis build  $TRAVIS_BUILD_ID Buil from commit $REV"
 - git push -fq deploy deploy
