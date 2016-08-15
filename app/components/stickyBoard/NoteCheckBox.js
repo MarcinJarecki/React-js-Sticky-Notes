@@ -4,7 +4,7 @@ var NoteCheckBox = React.createClass({
 
   getInitialState: function() {
     return {
-      checked: false,
+      checked: false
     };
   },
 
@@ -21,7 +21,7 @@ var NoteCheckBox = React.createClass({
           onChange={this.handleChecked}/> Done </label>
       </p>
     );
-  },
+  }
 });
 
 module.exports = NoteCheckBox;
