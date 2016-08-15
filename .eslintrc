@@ -29,7 +29,7 @@
     "react-internal"
   ],
   "rules": {
-    "no-sconsole": 0,
+    "no-console": 0,
     // // "no-underscore-dangle": 1,
     // //rules from facebook/react
     // "comma-dangle": [
@@ -473,7 +473,7 @@
       {
         "anonymous": "never",
         "named": "never"
-      },
+      }
     ],
     // incompatible with our legacy inline type annotations
     "space-in-parens": [
