@@ -5,7 +5,7 @@ var StickyNotes = React.createClass({
 
   getInitialState: function() {
     return {
-      texDecorationNote: this.normalNoteStyle,
+      texDecorationNote: this.normalNoteStyle
     };
   },
 
@@ -22,15 +22,15 @@ var StickyNotes = React.createClass({
   },
 
   removeButtonStyle: {
-    'float': 'right',
+    'float': 'right'
   },
 
   doneNoteStyle: {
-    'text-decoration': 'line-through',
+    'text-decoration': 'line-through'
   },
 
   normalNoteStyle: {
-    'text-decoration': 'none',
+    'text-decoration': 'none'
   },
 
   remove: function() {
@@ -71,7 +71,7 @@ var StickyNotes = React.createClass({
         </ul>
       </div>
     );
-  },
+  }
 });
 
 module.exports = StickyNotes;

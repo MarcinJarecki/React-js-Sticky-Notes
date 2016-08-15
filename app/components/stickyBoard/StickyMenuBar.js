@@ -14,7 +14,7 @@ var StickyMenuBar = React.createClass({
           onClick={this.createNote.bind(null, 'Empty title') } ></button>
       </div>
     );
-  },
+  }
 });
 
 module.exports = StickyMenuBar;

@@ -13,7 +13,7 @@ var MenuBar = React.createClass({
         <p>Main menu bar</p>
       </div>
     );
-  },
+  }
 });
 
 module.exports = MenuBar;

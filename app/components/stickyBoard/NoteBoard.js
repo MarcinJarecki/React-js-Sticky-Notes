@@ -9,25 +9,25 @@ var NoteBoard = React.createClass({
       notes: [
         {
           title: 'Shopping list',
-          text: 'Apple',
+          text: 'Apple'
         },
         {
           title: 'Lerning plan',
-          text: 'React',
+          text: 'React'
         },
         {
           title: 'Exercises list',
-          text: 'Running',
+          text: 'Running'
         },
         {
           title: 'Other things',
-          text: 'Nap',
+          text: 'Nap'
         },
         {
           title: 'Trip list',
-          text: 'Lake',
-        },
-      ],
+          text: 'Lake'
+        }
+      ]
     };
   },
 
@@ -65,7 +65,7 @@ var NoteBoard = React.createClass({
         </div>
       </div>
     );
-  },
+  }
 });
 
 module.exports = NoteBoard;
