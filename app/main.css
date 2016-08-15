@@ -93,11 +93,13 @@ footer{
 .note ul li {
   margin:1em;
   float:left;
+}
+
+.note ul li h2 {
   font-size:140%;
   font-weight:bold;
   padding-bottom:10px;
 }
-
 .note ul li p {
   font-family:"Reenie Beanie",arial,sans-serif;
   font-size:180%;
