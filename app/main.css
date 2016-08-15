@@ -88,12 +88,16 @@ footer{
   -o-transform: .15s linear;
   -webkit-transform: .15s linear;
   transform: .15s linear;
+  -ms-transform: .15s linear;
 }
 .note ul li {
   margin:1em;
   float:left;
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
 }
-.note ul li h2 {
+.note h2 {
   font-size:140%;
   font-weight:bold;
   padding-bottom:10px;
@@ -128,6 +132,7 @@ footer{
   -webkit-transform: rotate(-3deg);
   -moz-transform: rotate(-3deg);
   transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
   position:relative;
   top:-5px;
   background:#ccf;
@@ -142,6 +147,7 @@ footer{
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
   position:relative;
   top:-10px;
   background:#ffc;
@@ -159,6 +165,7 @@ footer{
   -moz-transform:  scale(1.25);
   -o-transform:  scale(1.25);
   transform: scale(1.25);
+  -ms-transform: scale(1.25);
   position:relative;
   z-index:5;
 }
@@ -168,4 +175,5 @@ footer{
   -moz-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
+  -ms-transform: scale(1);
 }
