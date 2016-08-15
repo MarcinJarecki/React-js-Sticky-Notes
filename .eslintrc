@@ -23,6 +23,9 @@
     "jest": true,
     "jasmine": true
   },
+  "ecmaFeatures": {
+    "modules": true
+  },
   // Enable custom plugin known as eslint-plugin-react
   "plugins": [
     "react",
