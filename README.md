@@ -15,6 +15,14 @@ Sticky notes - React.js project with webpack and hot reload
 - Text editor: Atom, Sublime, Visual Studio Code etc.
 - node.js v6
 
+####Demo Site
+App hosted on GitHub Pages: [Live demo app](https://marcinjarecki.github.io/React-js-Sticky-Notes/)
+
+####Command
+ - npm install - install depedencies
+ - npm start  - run develop webpack serwer (run on 2992 port)
+ - npm test - run eslint and test
+
 ####Project structure
 - /app - aplication file
 - /dist - folder fo production version (minification)
