@@ -20,8 +20,9 @@ App hosted on GitHub Pages: [Live demo app](https://marcinjarecki.github.io/Reac
 
 ####Command
  - npm install - install depedencies
- - npm start  - run develop webpack serwer (run on 2992 port)
+ - npm start  - run develop webpack serwer (run on 2992 port with webpack.dev.config)
  - npm test - run eslint and test
+ - npm build - prepare build to /dist folder (minified version with webpack.prod.config) 
 
 ####Project structure
 - /app - aplication file

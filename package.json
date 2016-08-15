@@ -41,7 +41,6 @@
     "eslint": "^3.0.0",
     "eslint-loader": "^1.4.0",
     "eslint-plugin-react": "^5.2.2",
-    "eslint-plugin-react-internal": "file:eslint-rules",
     "fbjs-scripts": "^0.7.1",
     "html-webpack-plugin": "^2.22.0",
     "jshint": "^2.9.2",
