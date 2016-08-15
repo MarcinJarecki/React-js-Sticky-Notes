@@ -19,6 +19,8 @@ exclude_paths:
 - dist/**/*
 - node_modules/**/*
 - tests/**/*
+- webpack.dev.config.js
+- webpack.prod.config.js
 ecmaFeatures:
   modules: true
   jsx: true

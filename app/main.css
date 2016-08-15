@@ -10,7 +10,7 @@ body{
   background: #666;
   color: #fff;
 }
-div#menu-bar{
+#menu-bar{
   font-family:arial,sans-serif;
   font-size:120%;
   height: 3.6em;
@@ -39,7 +39,7 @@ footer{
   float:left;
 }
 
-div#note{
+#note{
   color:#000;
   background: transparent;
   border-style: none;
