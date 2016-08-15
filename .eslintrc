@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   // OFF = 0;
   // WARNING = 1;
   // ERROR = 2;
@@ -13,7 +14,11 @@
   // as described in a section below.
   "parserOptions": {
     "ecmaVersion": 6,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
   },
   "env": {
     "es6": true,
@@ -24,12 +29,13 @@
     "jasmine": true
   },
   "ecmaFeatures": {
-    "modules": true
+    "modules": true,
+    "jsx": true
   },
   // Enable custom plugin known as eslint-plugin-react
   "plugins": [
-    "react",
-    "react-internal"
+    "react"
+    // "react-internal"
   ],
   "rules": {
     "no-console": 0,
@@ -88,7 +94,7 @@
     //Rules from https://github.com/facebook/react/blob/master/.eslintrc.js
     // CUSTOM RULES
     // the second argument of warning/invariant should be a literal string
-    "react-internal/warning-and-invariant-args": 2,
+    // "react-internal/warning-and-invariant-args": 2,
     // Possible 2s <http://eslint.org/docs/rules/#possible-2s>
     // equivalent to jshint boss
     "no-cond-assign": 0,
