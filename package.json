@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint app/**/*.js",
     "test": "npm run lint",
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --hot --inline --progress --colors",
+    "start": "webpack-dev-server --config ./webpack.dev.config.js  --inline --progress --colors",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "repository": {
