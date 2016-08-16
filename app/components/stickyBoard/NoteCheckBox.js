@@ -10,7 +10,6 @@ var NoteCheckBox = React.createClass({
 
   handleChecked: function() {
     this.setState({ checked: !this.state.checked });
-    console.log(!this.state.checked);
     this.props.doneNote(!this.state.checked);
   },
 
@@ -18,7 +17,7 @@ var NoteCheckBox = React.createClass({
     return (
       <p className="checkbox">
         <label><input className="pull-right" type="checkbox" defaultChecked={this.state.checked}
-          onChange={this.handleChecked}/> Done </label>
+          onChange={this.handleChecked} /> Done </label>
       </p>
     );
   }

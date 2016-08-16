@@ -1,5 +1,7 @@
 import React from 'react';
 import NoteCheckBox from './NoteCheckBox';
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 
 var StickyNotes = React.createClass({
 
@@ -55,8 +57,7 @@ var StickyNotes = React.createClass({
       <div className={this.noteStyleAnimation(this.props.noteID) }>
         <ul>
           <li>
-            <a href="#">
-
+          <Link to="/board">
               <button onClick={this.remove} className="btn btn-xs btn-danger glyphicon glyphicon-trash"
                 style={this.removeButtonStyle}> </button>
               <h4 style={this.state.texDecorationNote}>{this.props.title}</h4>
@@ -66,7 +67,7 @@ var StickyNotes = React.createClass({
               <div id="note">
                 <NoteCheckBox doneNote={this.doneNote}/>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
