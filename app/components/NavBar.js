@@ -2,7 +2,7 @@ import React from 'react';
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
-var MenuBar = React.createClass({
+var NavBar = React.createClass({
 
   render: function() {
     return (
@@ -38,5 +38,5 @@ var MenuBar = React.createClass({
   }
 });
 
-module.exports = MenuBar;
+module.exports = NavBar;
 

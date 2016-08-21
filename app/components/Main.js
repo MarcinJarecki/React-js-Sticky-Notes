@@ -1,12 +1,12 @@
 import React from 'react';
 import Footer from './Footer';
-import MenuBar from '../components/MenuBar';
+import NavBar from '../components/NavBar';
 
 var Main = React.createClass({
   render: function() {
     return (
       <div>
-        <MenuBar />
+        <NavBar />
         {this.props.children}
         <Footer/>
       </div>
