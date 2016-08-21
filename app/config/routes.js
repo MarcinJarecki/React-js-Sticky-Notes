@@ -5,6 +5,7 @@ import StickyBoard from '../components/StickyBoard';
 import Settings  from '../components/Settings';
 import About from '../components/About';
 import Home from '../components/Home';
+import SignIn from '../components/SignIn';
 
 var routes = (
     <Router history={hashHistory}>
@@ -14,6 +15,7 @@ var routes = (
             <Route path="/config" component={Settings} />
             <Route path="/about" header= "Marcin Jarecki" component={About} />
             <Route path="/home" component={Home} />
+            <Route path="/sign_in" component={SignIn} />
         </Route>
     </Router>
 );

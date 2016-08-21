@@ -1,6 +1,5 @@
 import React from 'react';
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import {Link} from 'react-router';
 
 var NavBar = React.createClass({
 
@@ -28,7 +27,7 @@ var NavBar = React.createClass({
               <span className=" glyphicon glyphicon-plus" aria-hidden="true"></span>About
             </button>
           </Link>
-          <Link to="/about">
+          <Link to="/sign_in">
             <button type="button" className="btn btn-default pull-right navbar-btn">Sign in</button>
           </Link>
         </div>
