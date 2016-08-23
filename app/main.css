@@ -30,7 +30,7 @@ footer{
   left: 0;
   bottom: 0;
 }
-.board div{
+.board {
   font-family:arial,sans-serif;
   font-size:100%;
   margin:0;

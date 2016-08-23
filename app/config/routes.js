@@ -12,7 +12,7 @@ var routes = (
         <Route path="/" component={Main}>
             <IndexRoute component={Home} />
             <Route path="/board" component={StickyBoard} />
-            <Route path="/config" component={Settings} />
+            <Route path="/settings" component={Settings} />
             <Route path="/about" header= "Marcin Jarecki" component={About} />
             <Route path="/home" component={Home} />
             <Route path="/sign_in" component={SignIn} />
