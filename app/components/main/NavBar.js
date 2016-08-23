@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router';
 
 export default class NavBar extends React.Component {
+  //set nav-item active to right navBar element
+  
   render() {
     return (
       <nav className="navbar navbar-full navbar-inverse bg-faded">

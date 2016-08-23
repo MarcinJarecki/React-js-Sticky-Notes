@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from './Footer';
-import NavBar from '../components/NavBar';
+import Footer from './main/Footer';
+import NavBar from './main/NavBar';
 
 var Main = React.createClass({
   render: function() {
