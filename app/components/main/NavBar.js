@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
           label: ' Home',
           link: '/home',
           class: {
-            span: 'glyphicon glyphicon-home',
+            span: 'glyphicon glyphicon-home'
           }
         },
         {
@@ -32,7 +32,7 @@ export default class NavBar extends React.Component {
           label: ' Board',
           link: '/board',
           class: {
-            span: 'glyphicon glyphicon-check',
+            span: 'glyphicon glyphicon-check'
           }
         },
         {
@@ -40,7 +40,7 @@ export default class NavBar extends React.Component {
           label: ' About',
           link: '/about',
           class: {
-            span: 'glyphicon glyphicon-info-sign',
+            span: 'glyphicon glyphicon-info-sign'
           }
         }
       ],
@@ -50,7 +50,7 @@ export default class NavBar extends React.Component {
           label: ' Account',
           link: '/account',
           class: {
-            span: 'glyphicon glyphicon-cog',
+            span: 'glyphicon glyphicon-cog'
           }
         },
         {
@@ -58,7 +58,7 @@ export default class NavBar extends React.Component {
           label: ' Logout',
           link: '/logout',
           class: {
-            span: 'glyphicon glyphicon-log-in',
+            span: 'glyphicon glyphicon-log-in'
           }
         },
         {
@@ -66,7 +66,7 @@ export default class NavBar extends React.Component {
           label: ' Sign In',
           link: '/sign-in',
           class: {
-            span: 'glyphicon glyphicon-user',
+            span: 'glyphicon glyphicon-user'
           }
         }
       ]
