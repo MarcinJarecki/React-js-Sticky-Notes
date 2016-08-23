@@ -20,17 +20,17 @@ export default class NavBar extends React.Component {
             <ul className="nav navbar-nav">
               <li className="nav-item active">
                 <Link to="/home">
-                  <span className=" glyphicon glyphicon-home" aria-hidden="true"></span> Home
+                  <span className="glyphicon glyphicon-home" aria-hidden="true"></span> Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/board">
-                  <span className=" glyphicon glyphicon-check" aria-hidden="true"></span> Board
+                  <span className="glyphicon glyphicon-check" aria-hidden="true"></span> Board
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/about">
-                  <span className=" glyphicon glyphicon-plus" aria-hidden="true"></span> About
+                  <span className="glyphicon glyphicon-plus" aria-hidden="true"></span> About
                 </Link>
               </li>
             </ul>
@@ -57,42 +57,4 @@ export default class NavBar extends React.Component {
     );
   }
 }
-
-
-
-  // render: function() {
-  //   return (
-  //     <div className="board-container" id="menu-bar" >
-  //       <div className="btn-group btn-group-lg" role="group" aria-label="...">
-  //         <Link to="/home">
-  //           <button type="button" className="btn btn-default pull-left navbar-btn">
-  //             <span className=" glyphicon glyphicon-home" aria-hidden="true"></span> Home
-  //           </button>
-  //         </Link>
-  //         <Link to="/board">
-  //           <button type="button" className="btn btn-default pull-left navbar-btn">
-  //             <span className=" glyphicon glyphicon-check" aria-hidden="true"></span>Board
-  //           </button>
-  //         </Link>
-  //         <Link to="/config">
-  //           <button type="button" className="btn btn-default pull-left navbar-btn">
-  //             <span className=" glyphicon glyphicon-cog" aria-hidden="true"></span>Config
-  //           </button>
-  //         </Link>
-  //         <Link to="/about">
-  //           <button type="button" className="btn btn-default pull-left navbar-btn">
-  //             <span className=" glyphicon glyphicon-plus" aria-hidden="true"></span>About
-  //           </button>
-  //         </Link>
-  //         <Link to="/sign_in">
-  //           <button type="button" className="btn btn-default pull-right navbar-btn">Sign in</button>
-  //         </Link>
-  //       </div>
-
-  //     </div>
-  //   );
-//   }
-// });
-
-// module.exports = NavBar;
 
