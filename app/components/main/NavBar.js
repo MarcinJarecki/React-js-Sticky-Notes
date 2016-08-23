@@ -106,21 +106,13 @@ export default class NavBar extends React.Component {
   handleNavItemActive() {
     var activeHref = window.location.href;
     var navItems = [];
-    //var _this = this;
 
     navItems = navItems.concat(this.state.navLeftItem).concat(this.state.navRightItem);
 
     this.findLinkInUrl(navItems, activeHref, (dataId) => {
-      console.log('znaleziono' + dataId);
-      this.setActiveItem(dataId);
-      // _this.setActiveItem(dataId);
+      this.setState({ activeNavItem: { 'dataId': dataId } });
     });
 
-  }
-
-  setActiveItem(dataId) {
-    console.log(dataId);
-    this.setState({ activeNavItem: { 'dataId': dataId } });
   }
 
   findLinkInUrl(navItems, activeHref, callback) {
