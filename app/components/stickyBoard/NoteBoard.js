@@ -58,9 +58,9 @@ var NoteBoard = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="board">
         <StickyMenuBar createNote={this.createNote} />
-        <div className="board">
+        <div>
           {this.state.notes.map(this.eachNotes) }
         </div>
       </div>

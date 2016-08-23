@@ -4,11 +4,11 @@ import {Link} from 'react-router';
 export default class NavBar extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-inverse">
+      <nav className="navbar navbar-full navbar-inverse bg-faded">
         <div className="container-fluid">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-2">
+            <button type="button" className="navbar-toggle" data-toggle="collapse"
+              data-target="#navbar-collapse">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
@@ -16,37 +16,39 @@ export default class NavBar extends React.Component {
             </button>
             <a className="navbar-brand" href="#">Sticky Notes</a>
           </div>
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <div className="collapse navbar-collapse" id="navbar-collapse">
             <ul className="nav navbar-nav">
-
-              <li className="active">
+              <li className="nav-item active">
                 <Link to="/home">
                   <span className=" glyphicon glyphicon-home" aria-hidden="true"></span> Home
                 </Link>
               </li>
-
-              <li>
+              <li className="nav-item">
                 <Link to="/board">
-
                   <span className=" glyphicon glyphicon-check" aria-hidden="true"></span> Board
-
                 </Link>
               </li>
-              <li>
+              <li className="nav-item">
                 <Link to="/about">
                   <span className=" glyphicon glyphicon-plus" aria-hidden="true"></span> About
                 </Link>
               </li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a id="user" href="/account"><span className="glyphicon glyphicon-cog"></span> Account</a>
+              <li className="nav-item">
+                <Link to="/account">
+                  <span className="glyphicon glyphicon-cog"></span> Account
+                </Link>
               </li>
-              <li>
-                <a href="/logout"><span className="glyphicon glyphicon-log-in"></span>Logout</a>
+              <li className="nav-item">
+                <Link to="/logout">
+                 <span className="glyphicon glyphicon-log-in"></span> Logout
+                </Link>
               </li>
-              <li>
-                <a href="/login"> <span className="glyphicon glyphicon-user"></span> Log In </a>
+              <li className="nav-item">
+                <Link to="/login">
+                 <span className="glyphicon glyphicon-user"></span> Log In 
+                </Link>
               </li>
             </ul>
           </div>
