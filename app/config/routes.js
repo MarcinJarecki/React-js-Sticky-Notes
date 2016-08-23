@@ -7,7 +7,8 @@ import About from '../components/About';
 import Home from '../components/Home';
 import SignIn from '../components/SignIn';
 import Account from '../components/Account';
-import PageNotFound from '../components/PageNotFound'
+import PageNotFound from '../components/PageNotFound';
+
 
 var routes = (
     <Router history={hashHistory}>
