@@ -10,13 +10,12 @@ export default class NavBar extends React.Component {
     this.generateNavItem = this.generateNavItem.bind(this);
     this.handleNavItemActive = this.handleNavItemActive.bind(this);
     this.findLinkInUrl = this.findLinkInUrl.bind(this);
-    this.setActiveItem = this.setActiveItem.bind(this);
     this.liClassName = this.liClassName.bind(this);
 
     this.state = {
 
       activeNavItem: {
-        dataId: -1
+        dataId: 0
       },
 
       navLeftItem: [
@@ -118,6 +117,10 @@ export default class NavBar extends React.Component {
   findLinkInUrl(navItems, activeHref, callback) {
     var countItems = navItems.lenght;
     var counter = 0; // eslint-disable-line
+
+    if (activeHref.match(/(\/#\/\?)/g)) {
+      return callback(0);
+    }
 
     _.forEach(navItems, function loop(item) {
       counter += + 1;
