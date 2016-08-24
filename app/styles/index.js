@@ -33,8 +33,37 @@ var styles = {
     panelFooter: {
       'text-decoration': 'none',
       'font-weight': 'normal',
-      color: '#f1f1f1',
+      color: 'black',
     },
+    link: {
+      color: '#337ab7'
+    },
+    orBox: {
+      color: '#666666',
+      display: 'block',
+      'position': 'relative',
+      'font-size': '18px',
+      'margin-top': '10px',
+      'margin-bottom': '10px',
+      'padding-top': '10px',
+      'padding-bottom': '10px'
+    },
+    orSpan: {
+      'background-color': '#f1f1f1',
+      display: 'block',
+      position: 'absolute',
+      left: '50%',
+      top: '-2px',
+      'margin-left': '-25px',
+      width: '50px',
+      'text-align': 'center'
+    },
+    orHr: {
+      'background-color': '#cdcdcd',
+      height: '1px',
+      'margin-top': '0px',
+      'margin-bottom': '0px'
+    }
   }
 
 };

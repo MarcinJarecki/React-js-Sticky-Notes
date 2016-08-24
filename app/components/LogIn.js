@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import {pFont, loginFormStyle} from '../styles';
 
-var panelGrid = 'col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4';
+var panelGrid = 'col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-3 col-lg-4 col-lg-offset-4';
 
 export default class LogIn extends React.Component {
   render() {
@@ -18,16 +18,30 @@ export default class LogIn extends React.Component {
                 <div className="form">
                   <div className="lead"></div>
                   <div className="row-fluid" style={pFont}>
-                    <div className="row">
-                      <div className="col-xs-6 col-sm-6 col-md-6">
-                        <a href="#" className="btn sbtn-lg btn-primary btn-block">Facebook</a>
-                      </div>
-                      <div className="col-xs-6 col-sm-6 col-md-6">
-                        <a href="#" className="btn btn-lg btn-info btn-block">Google</a>
-                      </div>
+
+                    <div className="alert alert-danger">
+                      <a className="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
                     </div>
-                    <div>
-                      <hr/>
+
+                    <div className="form-group">
+                      <a href="/account/provider/google" title="Google"
+                        className="btn btn-block btn-social btn-lg btn-google">
+                        <i className="fa fa-google"></i> Sign in with Google
+                      </a>
+                      <a href="/account/provider/facebook" title="Facebook"
+                        className="btn btn-block btn-social btn-lg btn-facebook">
+                        <i className="fa fa-facebook"></i> Sign in with Facebook
+                      </a>
+                      <a href="/account/provider/github" title="github"
+                        className="btn btn-block btn-social btn-lg btn-github">
+                        <i className="fa fa-github"></i> Sign in with Github
+                      </a>
+                    </div>
+
+
+                    <div style={loginFormStyle.orBox}>
+                      <hr style={loginFormStyle.orHr} />
+                      <span style={loginFormStyle.orSpan}>or</span>
                     </div>
                     <div className="form-group">
                       <div className="input-group">
@@ -43,28 +57,30 @@ export default class LogIn extends React.Component {
                         <input type="password" id="inputPassword" name="password" className="form-control"
                           placeholder="Password" required />
                       </div>
-                      <input type="checkbox" value="Remeber me" /> Remeber me
-                      <Link to="/password_reset"  className="pull-right" style={loginFormStyle.labelLink} >
+                    </div>
+                    <div className="form-group"><div className="checkbox">
+                      <label htmlFor="rememberCheckbox" style={loginFormStyle.panelFooter}>
+                        <input type="checkbox" id="rememberCheckbox" value="Remeber me" />
+                        Remeber me</label>
+                      <Link  to="/password_reset"  className="pull-right" style={loginFormStyle.link} >
                         Forgot password?</Link>
+                    </div>
                     </div>
                     <div className="form-group">
                       <button className="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
                     </div>
                   </div>
-
-
                 </div>
               </div>
               <div className="panel-footer">
-                <label style={loginFormStyle.panelFooter}  >New to Sticky Notes?: &nbsp; </label>
-                <Link to="/signup"  >Create an account
+                <label style={loginFormStyle.panelFooter}>New to Sticky Notes?&nbsp; </label>
+                <Link style={loginFormStyle.link} to="/signup">Create an account
                 </Link>
               </div>
-
             </div>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }
