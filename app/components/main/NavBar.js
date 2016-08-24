@@ -1,6 +1,7 @@
 import React from 'react';
 import {IndexLink} from 'react-router';
 import _ from 'lodash';
+import {navBarStyle} from '../../styles';
 
 export default class NavBar extends React.Component {
 
@@ -55,16 +56,16 @@ export default class NavBar extends React.Component {
         },
         {
           dataId: 4,
-          label: ' Logout',
-          link: '/logout',
+          label: ' Log in',
+          link: '/login',
           class: {
             span: 'glyphicon glyphicon-log-in'
           }
         },
         {
           dataId: 5,
-          label: ' Sign In',
-          link: '/sign-in',
+          label: ' Sign up',
+          link: '/signup',
           class: {
             span: 'glyphicon glyphicon-user'
           }
@@ -135,7 +136,7 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-full navbar-inverse bg-faded">
+      <nav style={navBarStyle} className="navbar navbar-full navbar-inverse bg-faded" >
         <div className="container-fluid">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse"

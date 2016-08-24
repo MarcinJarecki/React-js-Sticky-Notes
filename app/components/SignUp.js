@@ -1,24 +1,29 @@
 import React from 'react';
 import {pFont} from '../styles';
 
-export default class Account extends React.Component {
+export default class SignUp extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2> Account information </h2>
+        <h2> Create your personal account </h2>
         <div className="lead"></div>
         <div className="row-fluid" style={pFont}>
           <div className="span4">
-            <p>User Name</p>
+            <p>Google</p>
+            <p>Facebook</p>
+            <p>------Or------</p>
           </div>
           <div className="span4">
-            <p>mail</p>
+            <p>Display Name</p>
           </div>
           <div className="span4">
-            <p>password</p>
+            <p>Email Address</p>
           </div>
           <div className="span4">
-            <p>New password</p>
+            <p>Password</p>
+          </div>
+          <div className="span4">
+            <p>Create an account</p>
           </div>
         </div>
       </div>

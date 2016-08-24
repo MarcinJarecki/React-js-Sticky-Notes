@@ -5,7 +5,8 @@ import StickyBoard from '../components/StickyBoard';
 import Settings  from '../components/Settings';
 import About from '../components/About';
 import Home from '../components/Home';
-import SignIn from '../components/SignIn';
+import SignUp from '../components/SignUp';
+import LoginIn from '../components/LogIn';
 import Account from '../components/Account';
 import PageNotFound from '../components/PageNotFound';
 
@@ -18,7 +19,8 @@ var routes = (
             <Route path="/settings" component={Settings} />
             <Route path="/about" header= "Marcin Jarecki" component={About} />
             <Route path="/home" component={Home} />
-            <Route path="/sign_in" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/login" component={LoginIn} />
             <Route path="/account" component={Account} />
             <Route path="*" component={PageNotFound}/>
         </Route>

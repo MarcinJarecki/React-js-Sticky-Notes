@@ -11,6 +11,9 @@ var styles = {
     color: '#004d80',
     'font-family': 'Segoe UI",Arial,sans-serif'
   },
+  navBarStyle: {
+    'margin-bottom': '0px'
+  }
 
 };
 
