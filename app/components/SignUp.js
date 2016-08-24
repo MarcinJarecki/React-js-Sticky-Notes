@@ -23,7 +23,7 @@ export default class SignUp extends React.Component {
             <p>Password</p>
           </div>
           <div className="span4">
-            <p>Create an account</p>
+            <p>Create an account / Register</p>
           </div>
         </div>
       </div>

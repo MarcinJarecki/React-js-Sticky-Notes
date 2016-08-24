@@ -8,6 +8,7 @@ import Home from '../components/Home';
 import SignUp from '../components/SignUp';
 import LoginIn from '../components/LogIn';
 import Account from '../components/Account';
+import PasswordReset from '../components/PasswordReset';
 import PageNotFound from '../components/PageNotFound';
 
 
@@ -22,6 +23,7 @@ var routes = (
             <Route path="/signup" component={SignUp} />
             <Route path="/login" component={LoginIn} />
             <Route path="/account" component={Account} />
+            <Route path="password_reset" component={PasswordReset} />
             <Route path="*" component={PageNotFound}/>
         </Route>
     </Router>
