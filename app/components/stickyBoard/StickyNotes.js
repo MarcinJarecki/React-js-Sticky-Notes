@@ -28,11 +28,11 @@ var StickyNotes = React.createClass({
   },
 
   doneNoteStyle: {
-    'text-decoration': 'line-through'
+    'textDecoration': 'line-through'
   },
 
   normalNoteStyle: {
-    'text-decoration': 'none'
+    'textDecoration': 'none'
   },
 
   remove: function() {

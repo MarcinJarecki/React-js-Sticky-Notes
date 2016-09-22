@@ -3,36 +3,36 @@ var styles = {
     color: '#66c2ff'
   },
   pFont: {
-    'font-size': '110%',
+    'fontSize': '110%',
     color: '#f1f1f1',
-    'text-decoration': 'none'
+    'textDecoration': 'none'
   },
   aFontFooter: {
     color: '#004d80',
-    'font-family': 'Segoe UI",Arial,sans-serif'
+    'fontFamily': 'Segoe UI",Arial,sans-serif'
   },
   navBarStyle: {
-    'margin-bottom': '0px'
+    'marginBottom': '0px'
   },
   loginFormStyle: {
     labelLink: {
       float: 'right',
-      'text-decoration': 'none',
-      'font-weight': 'normal',
+      'textDecoration': 'none',
+      'fontWeight': 'normal',
       color: '#66c2ff'
     },
     label: {
       float: 'left',
-      'text-decoration': 'none',
-      'font-weight': 'normal'
+      'textDecoration': 'none',
+      'fontWeight': 'normal'
     },
     panel: {
       background: '#f1f1f1',
       color: '#ff'
     },
     panelFooter: {
-      'text-decoration': 'none',
-      'font-weight': 'normal',
+      'textDecoration': 'none',
+      'fontWeight': 'normal',
       color: 'black',
     },
     link: {
@@ -42,27 +42,27 @@ var styles = {
       color: '#666666',
       display: 'block',
       'position': 'relative',
-      'font-size': '18px',
-      'margin-top': '10px',
-      'margin-bottom': '10px',
-      'padding-top': '10px',
-      'padding-bottom': '10px'
+      'fontSize': '18px',
+      'marginTop': '10px',
+      'marginBottom': '10px',
+      'paddingTop': '10px',
+      'paddingBottom': '10px'
     },
     orSpan: {
-      'background-color': '#f1f1f1',
+      'backgroundColor': '#f1f1f1',
       display: 'block',
       position: 'absolute',
       left: '50%',
       top: '-2px',
-      'margin-left': '-25px',
+      'marginLeft': '-25px',
       width: '50px',
-      'text-align': 'center'
+      'textAlign': 'center'
     },
     orHr: {
-      'background-color': '#cdcdcd',
+      'backgroundColor': '#cdcdcd',
       height: '1px',
-      'margin-top': '0px',
-      'margin-bottom': '0px'
+      'marginTop': '0px',
+      'marginBottom': '0px'
     }
   }
 

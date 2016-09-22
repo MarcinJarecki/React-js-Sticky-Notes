@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
 import {pFont, loginFormStyle} from '../styles';
+import SocialButtons from './logInSignUp/SocialButtons';
+import IncorrectLogin from './logInSignUp/IncorrectLogin';
+
 
 var panelGrid = 'col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-3 col-lg-4 col-lg-offset-4';
 
@@ -19,25 +22,8 @@ export default class LogIn extends React.Component {
                   <div className="lead"></div>
                   <div className="row-fluid" style={pFont}>
 
-                    <div className="alert alert-danger">
-                      <a className="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
-                    </div>
-
-                    <div className="form-group">
-                      <a href="/account/provider/google" title="Google"
-                        className="btn btn-block btn-social btn-lg btn-google">
-                        <i className="fa fa-google"></i> Log in with Google
-                      </a>
-                      <a href="/account/provider/facebook" title="Facebook"
-                        className="btn btn-block btn-social btn-lg btn-facebook">
-                        <i className="fa fa-facebook"></i> Log in with Facebook
-                      </a>
-                      <a href="/account/provider/github" title="github"
-                        className="btn btn-block btn-social btn-lg btn-github">
-                        <i className="fa fa-github"></i> Log in with Github
-                      </a>
-                    </div>
-
+                    <IncorrectLogin/>
+                    <SocialButtons/>
 
                     <div style={loginFormStyle.orBox}>
                       <hr style={loginFormStyle.orHr} />

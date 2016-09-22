@@ -3,14 +3,15 @@ import {aFont, pFont} from '../styles';
 
 export default class About extends React.Component {
   render() {
+    const header = this.props.route.header;
     return (
       <div className="container">
-        <h2> About </h2>
+        <h2> About {header}</h2>
         <div className="lead"></div>
         <div className="row-fluid" style={pFont}>
           <div className="span4">
             <p>&copy;2016 &nbsp;
-              <a style={aFont} href="https://github.com/MarcinJarecki/">Marcin Jarecki</a>
+              <a style={aFont} href="https://github.com/MarcinJarecki/">{header}</a>
             </p>
           </div>
           <div className="span4">
